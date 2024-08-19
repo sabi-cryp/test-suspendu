@@ -10,7 +10,7 @@ services:
       MYSQL_USER: dockeruser
       MYSQL_PASSWORD: docker
     ports:
-      - "3307:3306"
+      - "3308:3306"
 
   web:
     build:
@@ -19,4 +19,4 @@ services:
     depends_on:
       - db
     ports:
-      - "30001:30001"
+      - "30004:30004"
