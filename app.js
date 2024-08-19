@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
   user: 'dockeruser',
   password: 'docker',
   database: 'api',
-  port: 3308,
+  port: 3306,
 });
 
 // Check if the connection to MySQL is successful
