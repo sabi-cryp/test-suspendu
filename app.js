@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 
 // Create an Express application
 const app = express();
-const port = 30003;
+const port = 30001;
 
 // Add middleware to parse JSON data
 app.use(express.json());
@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
   user: 'dockeruser',
   password: 'docker',
   database: 'api',
-  port: 3306,
+  port: 3307,
 });
 
 // Check if the connection to MySQL is successful
