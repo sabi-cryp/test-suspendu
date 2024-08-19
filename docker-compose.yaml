@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-suspendu
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: api
+      MYSQL_USER: dockeruser
+      MYSQL_PASSWORD: docker
+    ports:
+      - "3306:3306"
+
+  web:
+    build:
+      context: .
+    container_name: test-suspendu
+    depends_on:
+      - db
+    ports:
+      - "30003:30003"
